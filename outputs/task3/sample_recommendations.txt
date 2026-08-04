@@ -1,0 +1,29 @@
+Recommendations for 'Dick Johnson Is Dead':
+                 title  type                          listed_in  similarity_score
+      Dog Gone Trouble Movie Children & Family Movies, Comedies             0.367
+            Avengement Movie                 Action & Adventure             0.365
+    The Debt Collector Movie                 Action & Adventure             0.365
+              S.W.A.T. Movie                 Action & Adventure             0.360
+Kung Fu Panda: Holiday Movie Children & Family Movies, Comedies             0.352
+
+Recommendations for '100 Humans':
+                        title    type                       listed_in  similarity_score
+       Coronavirus, Explained TV Show Docuseries, Science & Nature TV               1.0
+          Unnatural Selection TV Show Docuseries, Science & Nature TV               1.0
+             One Strange Rock TV Show Docuseries, Science & Nature TV               1.0
+             The Pyramid Code TV Show Docuseries, Science & Nature TV               1.0
+NATURE: Natural Born Hustlers TV Show Docuseries, Science & Nature TV               1.0
+
+Recommendations for '100 Things to do Before High School':
+                                       title  type listed_in  similarity_score
+                             Pocoyo Carnival Movie    Movies               1.0
+                      Jake's Buccaneer Blast Movie    Movies               1.0
+Power Rangers Super Samurai: Trickster Treat Movie    Movies               1.0
+                     Oddbods: Party Monsters Movie    Movies               1.0
+                      Derren Brown: The Push Movie    Movies               1.0
+
+Evaluation:
+                         seed_title  avg_genre_overlap  avg_similarity_score
+               Dick Johnson Is Dead                0.0                 0.362
+                         100 Humans                1.0                 1.000
+100 Things to do Before High School                1.0                 1.000

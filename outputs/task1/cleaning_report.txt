@@ -1,0 +1,7 @@
+TASK 1 - DATA CLEANING REPORT
+========================================
+Raw shape: (8790, 10)
+Clean shape: (8790, 15)
+Duplicate rows removed: 0
+'Not Given' countries replaced: 287
+Duplicate titles found: 3
