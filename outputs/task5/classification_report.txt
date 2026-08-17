@@ -1,9 +1,18 @@
 TASK 5 - CLASSIFICATION MODEL REPORT
-========================================
+==================================================
 
-Features used: ['primary_genre_enc', 'primary_country_enc', 'rating_enc', 'release_year', 'duration_value', 'year_added', 'director_known']
+Features used:
+- primary_genre_enc
+- primary_country_enc
+- rating_enc
+- release_year
+- duration_value
+- year_added
+- director_known
 
-Model comparison:
+
+MODEL COMPARISON
+----------------------------------------
               model  accuracy  precision   recall  f1_score
       Random Forest  0.998862   0.998867 0.998862  0.998863
       Decision Tree  0.997156   0.997158 0.997156  0.997157
@@ -11,7 +20,8 @@ Logistic Regression  0.996018   0.996070 0.996018  0.996025
 
 Best model: Random Forest
 
-Classification report:
+CLASSIFICATION REPORT
+----------------------------------------
               precision    recall  f1-score   support
 
        Movie       1.00      1.00      1.00      1225

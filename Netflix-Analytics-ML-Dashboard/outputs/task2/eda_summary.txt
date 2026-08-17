@@ -1,0 +1,8 @@
+TASK 2 - EDA SUMMARY OF FINDINGS
+========================================
+Total titles analyzed: 8790
+Movies make up 69.7% of the catalogue, TV Shows 30.3%.
+Top content-producing country: United States (3240 titles).
+Most common genre: International Movies (2752 titles).
+Most common content rating: TV-MA (3205 titles).
+Peak content-addition year: 2019 (2016 titles added).

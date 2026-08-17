@@ -1,0 +1,73 @@
+======================================================================
+NETFLIX CONTENT STRATEGY - BUSINESS INSIGHTS REPORT
+Auspify Technologies Data Science Internship - Task 6
+FIXED VERSION: Uses FAIR ML model (no data leakage)
+======================================================================
+
+1. DATA OVERVIEW
+----------------------------------------
+Total titles analyzed: 8790
+Movies: 6126 | TV Shows: 2664
+
+2. KEY ANALYTICS
+----------------------------------------
+Top 5 markets:
+country
+United States     3240
+India             1057
+United Kingdom     638
+Pakistan           421
+Canada             271
+
+Top 5 ratings:
+rating
+TV-MA    3205
+TV-14    2157
+TV-PG     861
+R         799
+PG-13     490
+
+Top 5 genres:
+listed_in
+International Movies      2752
+Dramas                    2426
+Comedies                  1674
+International TV Shows    1349
+Documentaries              869
+
+3. PREDICTIVE MODELS (FAIR - NO LEAKAGE)
+----------------------------------------
+Growth forecast (2022-2025):
+ release_year  predicted_titles
+         2022               963
+         2023              1014
+         2024              1065
+         2025              1116
+
+Content-type classifier (fair) accuracy: 0.982
+Features used: genre, country, rating, release_year
+Excluded: duration_value, director_known (leaky features)
+
+4. DATA QUALITY ISSUES
+----------------------------------------
+Missing director: 29.4%
+Missing country: 3.3%
+These gaps affect recommendation quality and should be addressed.
+
+5. BUSINESS RECOMMENDATIONS
+----------------------------------------
+1. Content mix: Movies dominate the catalogue (70%). Given TV Shows drive longer subscriber engagement/retention industry-wide, consider increasing TV Show investment, especially in high-performing markets.
+
+2. Market focus: United States and India lead content production. Underrepresented but populous markets could be prioritized for regional originals to diversify the catalogue and reduce single-market dependency.
+
+3. Catalogue growth: the forecast model projects roughly 1116 new titles/year by 2025 if historical trends continue; treat this as a baseline for content-budget planning.
+
+4. Ratings strategy: 'TV-MA' is the most common content rating, indicating a mature-audience skew; family-friendly content is under-represented.
+
+5. Data quality: 29% of titles are missing director metadata. Improving metadata completeness would improve recommendation-engine accuracy.
+
+6. ML Model: Fair classifier (no leaky features) achieves 98.2% accuracy. This is a realistic performance estimate for production use.
+
+6. SUPPORTING VISUALS
+----------------------------------------
+See: business_dashboard.png

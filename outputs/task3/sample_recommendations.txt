@@ -1,29 +1,68 @@
+TASK 3 - RECOMMENDATION SYSTEM REPORT
+==================================================
+
+FIXES APPLIED:
+- Using FULL dataset instead of 3000 sample
+- Richer content features (cast, description, country)
+- Added diversity boost for cross-type recommendations
+- Added evaluation metrics
+
+
+Recommendations for 'Ganglands':
+----------------------------------------
+          title    type                                                     listed_in  release_year        director  similarity_score  genre_overlap
+     Sentinelle   Movie              Action & Adventure, Dramas, International Movies          2021 Julien Leclercq             0.807           0.00
+Earth and Blood   Movie                       Dramas, International Movies, Thrillers          2020 Julien Leclercq             0.731           0.00
+          Lupin TV Show Crime TV Shows, International TV Shows, TV Action & Adventure          2021         Unknown             0.690           1.00
+     Crime Time TV Show Crime TV Shows, International TV Shows, TV Action & Adventure          2017         Unknown             0.690           1.00
+          Taken TV Show           Crime TV Shows, TV Action & Adventure, TV Thrillers          2018         Unknown             0.628           0.67
+
+
+Recommendations for 'Midnight Mass':
+----------------------------------------
+                    title    type                          listed_in  release_year      director  similarity_score  genre_overlap
+            Before I Wake   Movie           Horror Movies, Thrillers          2016 Mike Flanagan             0.750            0.0
+            Gerald's Game   Movie           Horror Movies, Thrillers          2017 Mike Flanagan             0.750            0.0
+                     Hush   Movie           Horror Movies, Thrillers          2016 Mike Flanagan             0.750            0.0
+  Brand New Cherry Flavor TV Show TV Dramas, TV Horror, TV Mysteries          2021       Unknown             0.678            1.0
+The Haunting of Bly Manor TV Show TV Dramas, TV Horror, TV Mysteries          2020       Unknown             0.678            1.0
+
+
 Recommendations for 'Dick Johnson Is Dead':
-                 title  type                          listed_in  similarity_score
-      Dog Gone Trouble Movie Children & Family Movies, Comedies             0.367
-            Avengement Movie                 Action & Adventure             0.365
-    The Debt Collector Movie                 Action & Adventure             0.365
-              S.W.A.T. Movie                 Action & Adventure             0.360
-Kung Fu Panda: Holiday Movie Children & Family Movies, Comedies             0.352
+----------------------------------------
+                 title  type                            listed_in  release_year         director  similarity_score  genre_overlap
+  The Debt Collector 2 Movie                   Action & Adventure          2020 Jesse V. Johnson             0.385            0.0
+          Carrie Pilby Movie                     Comedies, Dramas          2016    Susan Johnson             0.382            0.0
+      Alex Strangelove Movie Comedies, Dramas, Independent Movies          2018    Craig Johnson             0.379            0.0
+              S.W.A.T. Movie                   Action & Adventure          2003    Clark Johnson             0.368            0.0
+Kung Fu Panda: Holiday Movie   Children & Family Movies, Comedies          2010      Tim Johnson             0.367            0.0
 
-Recommendations for '100 Humans':
-                        title    type                       listed_in  similarity_score
-       Coronavirus, Explained TV Show Docuseries, Science & Nature TV               1.0
-          Unnatural Selection TV Show Docuseries, Science & Nature TV               1.0
-             One Strange Rock TV Show Docuseries, Science & Nature TV               1.0
-             The Pyramid Code TV Show Docuseries, Science & Nature TV               1.0
-NATURE: Natural Born Hustlers TV Show Docuseries, Science & Nature TV               1.0
 
-Recommendations for '100 Things to do Before High School':
-                                       title  type listed_in  similarity_score
-                             Pocoyo Carnival Movie    Movies               1.0
-                      Jake's Buccaneer Blast Movie    Movies               1.0
-Power Rangers Super Samurai: Trickster Treat Movie    Movies               1.0
-                     Oddbods: Party Monsters Movie    Movies               1.0
-                      Derren Brown: The Push Movie    Movies               1.0
+Recommendations for 'Stranger Things':
+----------------------------------------
+                         title    type                                    listed_in  release_year director  similarity_score  genre_overlap
+Chilling Adventures of Sabrina TV Show TV Horror, TV Mysteries, TV Sci-Fi & Fantasy          2020  Unknown             1.000           1.00
+                   Nightflyers TV Show TV Horror, TV Mysteries, TV Sci-Fi & Fantasy          2018  Unknown             1.000           1.00
+                         Helix TV Show TV Horror, TV Mysteries, TV Sci-Fi & Fantasy          2015  Unknown             1.000           1.00
+                      Manifest TV Show TV Dramas, TV Mysteries, TV Sci-Fi & Fantasy          2021  Unknown             0.935           0.67
+                        The OA TV Show TV Dramas, TV Mysteries, TV Sci-Fi & Fantasy          2019  Unknown             0.935           0.67
 
-Evaluation:
-                         seed_title  avg_genre_overlap  avg_similarity_score
-               Dick Johnson Is Dead                0.0                 0.362
-                         100 Humans                1.0                 1.000
-100 Things to do Before High School                1.0                 1.000
+
+Recommendations for 'The Crown':
+----------------------------------------
+           title    type                                           listed_in  release_year director  similarity_score  genre_overlap
+      The A List TV Show British TV Shows, International TV Shows, TV Dramas          2021  Unknown               1.0            1.0
+   Downton Abbey TV Show British TV Shows, International TV Shows, TV Dramas          2015  Unknown               1.0            1.0
+ Behind Her Eyes TV Show British TV Shows, International TV Shows, TV Dramas          2021  Unknown               1.0            1.0
+The English Game TV Show British TV Shows, International TV Shows, TV Dramas          2020  Unknown               1.0            1.0
+         Dracula TV Show British TV Shows, International TV Shows, TV Dramas          2020  Unknown               1.0            1.0
+
+
+Evaluation Metrics:
+----------------------------------------
+          seed_title  avg_similarity  avg_genre_overlap  same_type_ratio  diversity_score
+           Ganglands          0.7092              0.534              0.6              0.4
+       Midnight Mass          0.7212              0.400              0.4              0.4
+Dick Johnson Is Dead          0.3762              0.000              1.0              0.2
+     Stranger Things          0.9740              0.868              1.0              0.2
+           The Crown          1.0000              1.000              1.0              0.2

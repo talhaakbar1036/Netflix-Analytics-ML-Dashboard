@@ -1,0 +1,40 @@
+TASK 4 - TREND PREDICTION REPORT
+========================================
+
+Historical yearly counts:
+ release_year  title_count  pct_change
+         2000           37         NaN
+         2001           45   21.621622
+         2002           51   13.333333
+         2003           59   15.686275
+         2004           64    8.474576
+         2005           80   25.000000
+         2006           96   20.000000
+         2007           88   -8.333333
+         2008          135   53.409091
+         2009          152   12.592593
+         2010          192   26.315789
+         2011          185   -3.645833
+         2012          236   27.567568
+         2013          286   21.186441
+         2014          352   23.076923
+         2015          555   57.670455
+         2016          901   62.342342
+         2017         1030   14.317425
+         2018         1146   11.262136
+         2019         1030  -10.122164
+         2020          953   -7.475728
+         2021          592  -37.880378
+
+Forecast (2022-2026):
+ release_year  predicted_title_count
+         2022                    963
+         2023                   1014
+         2024                   1065
+         2025                   1116
+         2026                   1167
+
+Model MAE: 207.4, R2: -0.473
+
+Interpretation:
+The linear trend model shows content releases have been increasing by roughly 51 titles/year on average. Model fit on the 2019-2021 holdout produced R2=-0.47, meaning a simple linear trend only weakly captures the year-to-year variation (real-world catalogue growth is influenced by licensing deals, originals strategy, and regional expansion, which a purely linear model cannot capture). The 2020-2021 dip likely reflects production slowdowns during the COVID-19 pandemic rather than a genuine long-term decline.

@@ -1,0 +1,62 @@
+TASK 5 - CLASSIFICATION MODEL REPORT
+============================================================
+
+VERSION 1: FULL MODEL (with leaky features)
+----------------------------------------
+Features used: ['primary_genre_enc', 'primary_country_enc', 'rating_enc', 'release_year', 'year_added', 'duration_value', 'director_known']
+
+Model comparison:
+              model  accuracy  precision   recall  f1_score
+      Random Forest  0.998862   0.998867 0.998862  0.998863
+      Decision Tree  0.997725   0.997730 0.997725  0.997726
+Logistic Regression  0.996018   0.996070 0.996018  0.996025
+
+Best model: Random Forest
+
+Classification report:
+              precision    recall  f1-score   support
+
+       Movie       1.00      1.00      1.00      1225
+     TV Show       1.00      1.00      1.00       533
+
+    accuracy                           1.00      1758
+   macro avg       1.00      1.00      1.00      1758
+weighted avg       1.00      1.00      1.00      1758
+
+
+DATA LEAKAGE WARNING:
+----------------------------------------
+The following features are near-leaky:
+1. duration_value: Different units for Movies (minutes) vs TV Shows (seasons)
+2. director_known: Data collection artifact (97% Movies vs 9% TV Shows have director)
+
+These features give the model an unfair advantage not available in practice.
+
+VERSION 2: FAIR MODEL (without leaky features)
+----------------------------------------
+Features used: ['primary_genre_enc', 'primary_country_enc', 'rating_enc', 'release_year', 'year_added']
+
+Model comparison:
+              model  accuracy  precision   recall  f1_score
+      Decision Tree  1.000000   1.000000 1.000000  1.000000
+      Random Forest  0.986348   0.986610 0.986348  0.986257
+Logistic Regression  0.729238   0.707745 0.729238  0.693363
+
+Best model: Decision Tree
+
+Classification report:
+              precision    recall  f1-score   support
+
+       Movie       1.00      1.00      1.00      1225
+     TV Show       1.00      1.00      1.00       533
+
+    accuracy                           1.00      1758
+   macro avg       1.00      1.00      1.00      1758
+weighted avg       1.00      1.00      1.00      1758
+
+
+LEAKAGE IMPACT ANALYSIS:
+----------------------------------------
+Full Model Accuracy:  0.999
+Fair Model Accuracy:  1.000
+Accuracy Drop:        -0.001

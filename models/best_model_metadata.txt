@@ -1,0 +1,17 @@
+NETFLIX CLASSIFICATION - BEST MODEL
+==================================================
+
+Best Model: Random Forest
+Accuracy: 0.998862
+Precision: 0.998867
+Recall: 0.998862
+F1 Score: 0.998863
+
+Features used:
+- primary_genre_enc
+- primary_country_enc
+- rating_enc
+- release_year
+- duration_value
+- year_added
+- director_known

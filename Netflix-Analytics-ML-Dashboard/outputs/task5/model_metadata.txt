@@ -1,0 +1,6 @@
+full_model_accuracy: 0.9989
+fair_model_accuracy: 1.0000
+accuracy_drop: -0.0011
+leakage_detected: NO
+best_full_model: Random Forest
+best_fair_model: Decision Tree
